@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 import {
   FaFacebookSquare,
   FaLinkedin,
   FaDribbbleSquare,
   FaBehanceSquare,
   FaTwitterSquare,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 const data = [
   {
@@ -33,6 +33,6 @@ const data = [
     icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
     url: "https://www.twitter.com",
   },
-]
+];
 
-export default data
+export default data;

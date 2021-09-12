@@ -8,7 +8,25 @@ const Hero: FC = () => {
   return (
   <header className="hero">
     <section className="section-center hero-center">
-      <article className="hero-info"></article>
+      <article className="hero-info">
+        <div>
+          <div className="underline"></div>
+          <h1>I'm Radek</h1>
+          <h4>Junior React and Salesforce Web Developer</h4>
+          <Link to="/contact" className="btn">
+            contact me
+          </Link>
+          <div className="social-links">
+            {socialLinks.map((link: any) => {
+              return (
+                <a key={link.id} href={link.url} className="social-link">
+                  {link.icon}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </article>
       <StaticImage 
         src="../assets/images/hero.svg"
         alt="portfolio" 

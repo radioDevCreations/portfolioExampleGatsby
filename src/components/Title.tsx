@@ -1,7 +1,17 @@
-import React from "react"
+import React, { FC } from "react";
 
-const Title = () => {
-  return <h2>title component</h2>
+interface TitleProps {
+  title: string;
 }
 
-export default Title
+const Title: FC<TitleProps> = (props: TitleProps) => {
+  const {title} = props;
+  return (
+  <div className="section-title">
+    <h2>{title || 'default title'}</h2>
+    <div className="underline"></div>
+  </div>
+  );
+}
+
+export default Title;
