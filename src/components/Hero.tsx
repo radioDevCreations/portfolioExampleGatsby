@@ -1,11 +1,23 @@
-import React from "react"
-import { Link } from "gatsby"
-import socialLinks from "../constants/social_links"
+import React, { FC } from "react";
+import { Link } from "gatsby";
+import socialLinks from "../constants/social_links";
 // import heroImg from "../assets/images/hero.svg"
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
 
-const Hero = () => {
-  return <h2>hero component</h2>
+const Hero: FC = () => {
+  return (
+  <header className="hero">
+    <section className="section-center hero-center">
+      <article className="hero-info"></article>
+      <StaticImage 
+        src="../assets/images/hero.svg"
+        alt="portfolio" 
+        className="hero-img" 
+        placeholder="blurred"
+      />
+    </section>
+  </header>
+  );
 }
 
-export default Hero
+export default Hero;

@@ -15,7 +15,6 @@ const Layout: FC<LayoutProps> = (props: LayoutProps) => {
     <>
       <Navbar />
       {children}
-      <Footer />
     </>
   );
 };
