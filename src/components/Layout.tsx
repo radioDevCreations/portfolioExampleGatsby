@@ -1,11 +1,24 @@
-import React from "react"
-import Navbar from "./Navbar"
-import Sidebar from "./Sidebar"
-import Footer from "./Footer"
+import React, { FC } from "react";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
+import "normalize.css";
+import "../assets/css/main.css";
 
-import "../assets/css/main.css"
-const Layout = ({ children }) => {
-  return <>{children}</>
+export interface LayoutProps {
+  children: React.ReactNode;
 }
 
-export default Layout
+const Layout: FC<LayoutProps> = (props: LayoutProps) => {
+  const { children } = props;
+  return (
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  );
+};
+
+export default Layout;
+
