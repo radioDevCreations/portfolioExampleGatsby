@@ -12,6 +12,7 @@ const IndexPage: FC = () => {
       <main>
         <Hero />
         <Services />
+        <Jobs />
       </main>
     </>
   )
