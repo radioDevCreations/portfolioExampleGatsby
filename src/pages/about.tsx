@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Title from "../components/Title"
-import SEO from "../components/SEO"
+import React from "react";
+import { graphql } from "gatsby";
+import Title from "../components/Title";
+import SEO from "../components/SEO";
 
 const About = () => {
   return (
@@ -11,4 +11,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
