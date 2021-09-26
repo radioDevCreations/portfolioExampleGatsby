@@ -8,8 +8,11 @@ import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 
 const IndexPage: FC = (props: any) => {
-  const { data } = props;
-  console.log(data);
+  const {
+    allStrapiProject: {
+    nodes: projects
+  }
+} = props.data;
 
   return (
     <>
@@ -17,6 +20,10 @@ const IndexPage: FC = (props: any) => {
         <Hero />
         <Services />
         <Jobs />
+        <Projects 
+        title="featured-projects" 
+        showLink 
+        projects={projects}/>
       </main>
     </>
   )
