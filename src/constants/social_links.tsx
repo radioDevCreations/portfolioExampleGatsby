@@ -7,7 +7,7 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 
-const data = [
+export const socialLinks = [
   {
     id: 1,
     icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
@@ -35,4 +35,8 @@ const data = [
   },
 ];
 
-export default data;
+export interface SocialLink {
+  id: number;
+  icon: React.ReactNode;
+  url: string;
+}

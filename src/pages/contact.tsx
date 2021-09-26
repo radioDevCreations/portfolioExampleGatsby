@@ -1,11 +1,38 @@
-import React from "react"
+import React, { FC } from "react"
 import SEO from "../components/SEO"
-const contact = () => {
+const Contact: FC = () => {
   return (
     <>
-      <h2>contact page</h2>
+      <section className="contact-page">
+        <article className="contact-form">
+          <h3>get in touch</h3>
+          <form>
+            <div className="form-group">
+              <input 
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className="form-control" />
+              <input 
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="form-control" />
+              <textarea
+              name="message"
+              rows={5}
+              placeholder="Type Here..."
+              className="form-control">
+              </textarea>
+            </div>
+            <button type="submit" className="submit-btn btn">
+              submit here
+            </button>
+          </form>
+        </article>
+      </section>
     </>
   )
 }
 
-export default contact
+export default Contact;
