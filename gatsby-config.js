@@ -5,7 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata:{
+    title: `WebDev Portfolio`,
+    description: `Awesome portfolio using Gatsby and Strapi`,
+    titleTemplate: `%s | WebDev Portfolio`,
+    url: `http://localhost:8000`,
+  },
 
   plugins: [
     `gatsby-plugin-image`,

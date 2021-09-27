@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
@@ -10,10 +10,19 @@ export interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = (props: LayoutProps) => {
+  
   const { children } = props;
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+    console.log('toggle sidebar');
+  }
+
   return (
     <>
-      <Navbar />
+      <Navbar toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       {children}
       <Footer />
     </>
